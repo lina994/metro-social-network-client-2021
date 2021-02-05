@@ -1,0 +1,24 @@
+
+.appHeader {
+  grid-area: header;
+  background-color: #282c34;
+  position: relative;
+  /* height: 100%; */
+  /* height: 100px; */
+  /* width: 100%; */
+  /* height: 56px; */
+}
+
+.m7LogoWrapper {
+  height: 90%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 1%;
+}
+
+.m7Logo {
+  height: 100%;
+  max-width: 100%;
+}
