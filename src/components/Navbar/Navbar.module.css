@@ -1,5 +1,7 @@
 .appNavbar {
   grid-area: nav;
-  background-color: yellow;
+  background-color: #fff;
+  margin-left: 20px;
+  /* background-color: yellow; */
   /* height: 100px; */
 }
