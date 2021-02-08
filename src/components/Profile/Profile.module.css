@@ -1,6 +1,6 @@
 .appProfile {
   grid-area: section;
-  background-color: green;
+  /* background-color: green; */
   margin-right: 20px;
   position: relative;
   width: 80%;

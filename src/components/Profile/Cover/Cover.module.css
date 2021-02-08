@@ -1,8 +1,10 @@
 .coverImageWrapper {
   background-color: grey;
-  width: 100%;
+  width: 90%;
+  max-width: 1000px;
   height: 30%;
   max-height: 200px;
+  margin: 0 auto;
 }
 
 .coverImage {
