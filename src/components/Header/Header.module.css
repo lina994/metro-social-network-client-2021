@@ -3,10 +3,11 @@
   grid-area: header;
   background-color: #282c34;
   position: relative;
+  height: 56px;
   /* height: 100%; */
   /* height: 100px; */
   /* width: 100%; */
-  /* height: 56px; */
+  
 }
 
 .m7LogoWrapper {

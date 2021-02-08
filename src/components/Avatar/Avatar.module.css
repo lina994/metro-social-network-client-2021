@@ -1,0 +1,52 @@
+.appAvatarWrapper {
+  grid-area: avatar;
+  background-color: #fff;
+  margin-left: 20px;
+  padding: 3% 2%;
+  height: 170px;
+}
+
+.innerWrapper {
+  background-color: #231f23;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; 
+  padding: 1% 5%;
+}
+
+.leftSide {
+  width: 100px;
+}
+
+.avatarWrapper {
+  width: 100px;
+  height:100px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2;
+}
+
+.rightSide {
+  width: calc(100% - 100px);
+  padding-left: 10%;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.age, .city {
+  font-weight: 500;
+}

@@ -20,7 +20,7 @@ function ProfileInformation(props) {
         </div>
         <div className={`${s.city} ${s.info}`}>
           <div className={s.field}>City:</div>
-          <div className={s.value}>Tel-Aviv</div>
+          <div className={s.value}>Tel-Aviv, Israel</div>
         </div>
         <div className={`${s.education} ${s.info}`}>
           <div className={s.field}>Education:</div>

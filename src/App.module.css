@@ -9,11 +9,12 @@
   display: grid;
   grid-template-areas: 
   "header header"
+  "avatar section"
   "nav section"
   "footer section"
   ". section";
-  grid-template-rows: 56px 500px 100px 1fr;
-  grid-template-columns: 15% 1fr;
+  grid-template-rows: 56px 170px 400px 100px 1fr;
+  grid-template-columns: 20% 1fr;
   gap: 10px 20px;
   background-color: #f2f2f2;
 }
