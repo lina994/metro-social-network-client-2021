@@ -7,7 +7,7 @@ function Post(props) {
     <div className={s.postWrapper}>
       <div className={s.leftSide}>
         <div className={s.profileImageWrapper}>
-          <img className={s.profileImage} src={author.authorImg.imgSrc} alt={author.authorImg.imgAlt} />
+          <img className={s.profileImage} src={author.imgSrc} alt="author avatar" />
         </div>
       </div>
       <div className={s.rightSide}>

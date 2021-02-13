@@ -2,44 +2,25 @@ import logoImage from './resources/logo/m7_logo.svg';      // Header
 import profileImage from './resources/profile_image.jpg';  // Avatar, ProfileInformation, Post
 import coverImage from './resources/cover_image.jpg'       // Cover
 
-let logoAlt = "Metro7 logo";
-let profileImageAlt = "profile avatar";
-let coverAlt = "cover";
-
+// Header
 let header = {
-  logo: {
-    imgSrc: logoImage,
-    imgAlt: logoAlt
-  }
+  logo: logoImage
 };
 
-let profileBasicInfo = {
-  profileImage: {
-    imgSrc: profileImage,
-    imgAlt: profileImageAlt
-  },
+// Avatar
+let avatar = {
+  imgSrc: profileImage,
   name: "Oscar",
   birthday: "2016-02-29",  // "YYYY-MM-DD"
   location: "Tel-Aviv, Israel"
 };
 
-let profileAdditionalInfo = {
-  education: "",
-  website: ""
-};
-
-let avatar = {
-  profileInfo: profileBasicInfo
-};
-
+// Profile
 let posts = [
   {
     author: {
       name: "Oscar",
-      authorImg: {
-        imgSrc: profileImage,
-        imgAlt: profileImageAlt
-      }
+      imgSrc: profileImage
     },
     date: "7/2/21, 13:00",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -52,10 +33,7 @@ let posts = [
   {
     author: {
       name: "Oscar",
-      authorImg: {
-        imgSrc: profileImage,
-        imgAlt: profileImageAlt
-      }
+      imgSrc: profileImage
     },
     date: "12/2/21, 10:00",
     text: `Lorem ipsum voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -65,17 +43,20 @@ let posts = [
 
 let profilePage = {
   cover: {
-    imgSrc: coverImage,
-    imgAlt: coverAlt
+    imgSrc: coverImage
   },
   profileInfo: {
-    profileBasicInfo: profileBasicInfo,
-    profileAdditionalInfo: profileAdditionalInfo
+    imgSrc: profileImage,
+    name: "Oscar",
+    birthday: "2016-02-29",  // "YYYY-MM-DD"
+    location: "Tel-Aviv, Israel",
+    education: "",
+    website: ""
   },
   posts: posts
 };
 
-
+// state
 let state = {
   header: header,
   avatar: avatar,
@@ -83,6 +64,7 @@ let state = {
   profilePage: profilePage
 };
 
+// store
 let store = {
   state: state
 }

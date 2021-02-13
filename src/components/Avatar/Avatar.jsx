@@ -12,22 +12,20 @@ function _calculateAge(birthdayString) {
 }
 
 function Avatar(props) {
-  let info = props.avatar.profileInfo;
-  let avatarImg = info.profileImage;
-  let age = _calculateAge(info.birthday);
+  let age = _calculateAge(props.avatar.birthday);
 
   return (
     <div className={s.appAvatarWrapper}>
       <div className={s.innerWrapper}>
         <div className={s.leftSide}>
           <div className={s.avatarWrapper}>
-            <img className={s.avatar} src={avatarImg.imgSrc} alt={avatarImg.imgAlt} />
+            <img className={s.avatar} src={props.avatar.imgSrc} alt="profile avatar" />
           </div>
         </div>
         <div className={s.rightSide}>
-          <div className={s.name}>{info.name}</div>
+          <div className={s.name}>{props.avatar.name}</div>
           <div className={s.age}>{age + " years"}</div>
-          <div className={s.city}>{info.location}</div>
+          <div className={s.city}>{props.avatar.location}</div>
         </div>
       </div>
     </div>
