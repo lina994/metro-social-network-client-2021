@@ -8,7 +8,7 @@ function Posts(props) {
   return (
     <div className={s.myPosts}>
       <NewPost />
-      <OldPosts />
+      <OldPosts posts={props.posts} />
     </div>
   );
 }

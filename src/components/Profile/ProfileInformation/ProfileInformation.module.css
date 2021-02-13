@@ -1,17 +1,17 @@
 .profileInfo {
-  background: #fff;
   width: 90%;
   max-width: 1000px;
   margin: 30px auto;
   padding: 30px 50px;
+  background: #fff;
 }
 
 .profileImageWrapper {
   display: inline-block;
-  vertical-align: top;
-  background-color: grey;
   width: 200px;
   height: 200px;
+  vertical-align: top;
+  background-color: grey;
 }
 
 .profileImage {
@@ -23,7 +23,6 @@
 .userInfo {
   display: inline-block;
   vertical-align: top;
-  /* background: grey; */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #585558;

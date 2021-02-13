@@ -8,9 +8,9 @@ import Posts from './Posts/Posts';
 function Profile(props) {
   return (
     <section className={s.appProfile}>
-      <Cover />
-      <ProfileInformation />
-      <Posts />
+      <Cover cover={props.profilePage.cover} />
+      <ProfileInformation profileInfo={props.profilePage.profileInfo}/>
+      <Posts posts={props.profilePage.posts}/>
     </section>
   );
 }

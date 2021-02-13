@@ -1,8 +1,6 @@
 .appFooter {
   grid-area: footer;
-  background-color: #fff;
-
   margin-left: 20px;
-  margin-bottom: 10px;
-  /* height: 100px; */
+  padding: 3% 2%;
+  background-color: #fff;
 }

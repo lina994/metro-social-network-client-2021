@@ -1,24 +1,24 @@
 .postWrapper {
-  background: #fff;
   width: 90%;
   max-width: 1000px;
   margin: 30px auto;
   padding: 30px 50px;
+  background: #fff;
 }
 
 .leftSide {
-  display: inline-block;
   min-width: 80px;
   max-width: 20%;
   vertical-align: top;
+  display: inline-block;
 }
 
 .profileImageWrapper {
   width: 50px;
   height:50px;
   display: inline-block;
-  /* vertical-align: top; */
   background-color: grey;
+  border-radius: 50%;
 }
 
 .profileImage {
@@ -29,8 +29,8 @@
 }
 
 .rightSide {
-  display: inline-block;
   width: 80%;
+  display: inline-block;
 }
 
 .name {

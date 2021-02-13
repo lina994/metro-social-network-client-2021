@@ -6,13 +6,13 @@ import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Footer from './components/Footer/Footer';
 
-function App() {
+function App(props) {
   return (
     <div className={s.appWrapper}>
-      <Header />
-      <Avatar />
+      <Header header={props.store.state.header} />
+      <Avatar avatar={props.store.state.avatar}/>
       <Navbar />
-      <Profile />
+      <Profile profilePage={props.store.state.profilePage} />
       <Footer />
     </div>
   );

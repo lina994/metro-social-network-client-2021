@@ -13,8 +13,8 @@
   "nav section"
   "footer section"
   ". section";
-  grid-template-rows: 56px 170px 400px 100px 1fr;
-  grid-template-columns: 20% 1fr;
+  grid-template-rows: 56px 170px auto 100px 1fr;
+  grid-template-columns: minmax(300px,20%) 1fr;
   gap: 10px 20px;
   background-color: #f2f2f2;
 }
