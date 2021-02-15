@@ -6,11 +6,9 @@
   background: #fff;
 }
 
-.leftSide {
-  min-width: 80px;
-  max-width: 20%;
-  vertical-align: top;
-  display: inline-block;
+.top {
+  display: flex;
+  align-items: center;
 }
 
 .profileImageWrapper {
@@ -28,9 +26,8 @@
   border-radius: 50%;
 }
 
-.rightSide {
-  width: 80%;
-  display: inline-block;
+.topContent {
+  margin-left: 10px;
 }
 
 .name {
@@ -46,4 +43,23 @@
 
 .text {
   font-size: 16px;
+}
+
+.hrLine {
+  margin: 20px auto;
+  border-top: 1px solid rgb(204,204,204);
+}
+
+.postFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.likesButton {
+  display: inline-block;
+  padding: 5px 25px;
+  text-align: center;
+  border: 2px solid rgb(204,204,204);
+  color: #585558;
+  font-weight: 500;
 }
