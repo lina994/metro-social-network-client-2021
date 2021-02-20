@@ -1,0 +1,6 @@
+.contacts {
+  /* flex-grow: 1; */
+  min-width: 300px;
+  /* min-height: 200px; */
+  background-color: blueviolet;
+}

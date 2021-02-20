@@ -1,6 +1,8 @@
 import logoImage from './resources/logo/m7_logo.svg';      // Header
-import profileImage from './resources/profile_image.jpg';  // Avatar, ProfileInformation, Post
 import coverImage from './resources/cover_image.jpg'       // Cover
+import profileImage from './resources/profile_image.jpg';  // Avatar, ProfileInformation, Post
+import profileImage2 from './resources/profile_image2.jpg';  // Dialogs
+import profileImage3 from './resources/profile_image3.jpg';  // Dialogs
 
 // Header
 let header = {
@@ -78,12 +80,46 @@ let profilePage = {
   posts: posts
 };
 
+//Dialogs
+let dialogsPage = {
+  contacts: [
+    
+  ],
+  dialogs: [
+    {
+      name: "Leo",
+      imgSrc: profileImage2,
+      messages: [
+        {
+          from: "Leo",
+          data: "15/2/21, 13:00",
+          text: "Hi!",
+          recieved: true
+        }
+      ]
+    },
+    {
+      name: "Grey",
+      imgSrc: profileImage3,
+      messages: [
+        {
+          from: "Grey",
+          data: "14/2/21, 14:00",
+          text: "Good morning!",
+          recieved: true
+        }
+      ]
+    }
+  ]
+}
+
 // state
 let state = {
   header: header,
   avatar: avatar,
   sidebar: {},
-  profilePage: profilePage
+  profilePage: profilePage,
+  dialogsPage: dialogsPage
 };
 
 // store
