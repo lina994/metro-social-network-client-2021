@@ -6,19 +6,19 @@ function Navbar(props) {
   return (
     <nav className={s.appNavbar}>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/profile'>Profile</NavLink>
+        <NavLink to='/profile' activeClassName={s.activeNavLink}>Profile</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/dialogs'>Dialogs</NavLink>
+        <NavLink to='/dialogs' activeClassName={s.activeNavLink}>Dialogs</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/news'>News</NavLink>
+        <NavLink to='/news' activeClassName={s.activeNavLink}>News</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/music'>Music</NavLink>
+        <NavLink to='/music' activeClassName={s.activeNavLink}>Music</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/settings'>Settings</NavLink>
+        <NavLink to='/settings' activeClassName={s.activeNavLink}>Settings</NavLink>
       </div>
     </nav>
   );
