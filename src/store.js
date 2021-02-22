@@ -3,6 +3,7 @@ import coverImage from './resources/cover_image.jpg'       // Cover
 import profileImage from './resources/profile_image.jpg';  // Avatar, ProfileInformation, Post
 import profileImage2 from './resources/profile_image2.jpg';  // Dialogs
 import profileImage3 from './resources/profile_image3.jpg';  // Dialogs
+import profileImage4 from './resources/profile_image4.jpg';  // Dialogs
 
 // Header
 let header = {
@@ -21,6 +22,7 @@ let avatar = {
 let posts = [
   {
     author: {
+      userId: 1,
       name: "Oscar",
       imgSrc: profileImage
     },
@@ -35,6 +37,7 @@ let posts = [
     comments: [
       {
         author: {
+          userId: 1,
           name: "Oscar",
           imgSrc: profileImage
         },
@@ -45,6 +48,7 @@ let posts = [
   },
   {
     author: {
+      userId: 1,
       name: "Oscar",
       imgSrc: profileImage
     },
@@ -55,6 +59,7 @@ let posts = [
     comments: [
       {
         author: {
+          userId: 1,
           name: "Oscar",
           imgSrc: profileImage
         },
@@ -70,6 +75,7 @@ let profilePage = {
     imgSrc: coverImage
   },
   profileInfo: {
+    userId: 1,
     imgSrc: profileImage,
     name: "Oscar",
     birthday: "2016-02-29",  // "YYYY-MM-DD"
@@ -80,13 +86,28 @@ let profilePage = {
   posts: posts
 };
 
-//Dialogs
+// Dialogs
 let dialogsPage = {
   contacts: [
-    
+    {
+      userId: 2,
+      name: "Leo",
+      imgSrc: profileImage2
+    },
+    {
+      userId: 3,
+      name: "Grey",
+      imgSrc: profileImage3
+    },
+    {
+      userId: 4,
+      name: "Flora",
+      imgSrc: profileImage4
+    }
   ],
   dialogs: [
     {
+      userId: 2,
       name: "Leo",
       imgSrc: profileImage2,
       messages: [
@@ -99,11 +120,25 @@ let dialogsPage = {
       ]
     },
     {
+      userId: 3,
       name: "Grey",
       imgSrc: profileImage3,
       messages: [
         {
           from: "Grey",
+          data: "14/2/21, 14:00",
+          text: "Good morning!",
+          recieved: true
+        }
+      ]
+    },
+    {
+      userId: 4,
+      name: "Flora",
+      imgSrc: profileImage4,
+      messages: [
+        {
+          from: "Flora",
           data: "14/2/21, 14:00",
           text: "Good morning!",
           recieved: true

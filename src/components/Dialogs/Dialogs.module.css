@@ -1,4 +1,4 @@
 .appDialogs {
   display: flex;
-  min-height: 50vh;;
+  min-height: calc(100vh - 56px - 10px - 10px); /* full page height - header height - grid gap - free space in buttom */
 }

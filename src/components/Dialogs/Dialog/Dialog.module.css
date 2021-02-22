@@ -1,5 +1,5 @@
 .dialog {
-  flex-grow: 3;
+  flex-grow: 5;
   /* min-height: 200px; */
-  background-color: aqua;
+  /* background-color: aqua; */
 }
