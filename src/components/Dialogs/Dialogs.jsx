@@ -7,7 +7,7 @@ function Dialogs(props) {
   return (
     <section className={s.appDialogs}>
       <Contacts contacts={props.dialogsPage.contacts} />
-      <Dialog />
+      <Dialog dialog ={props.dialogsPage.dialogs[0]} />
     </section>
   );
 }

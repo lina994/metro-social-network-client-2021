@@ -6,7 +6,7 @@ import NewMessage from './NewMessage/NewMessage';
 function Dialog(props) {
   return (
     <div className={s.dialog}>
-      <MessagesList />
+      <MessagesList dialog={props.dialog} />
       <NewMessage />
     </div>
   );

@@ -21,6 +21,7 @@ let avatar = {
 // Profile
 let posts = [
   {
+    postId: 1,
     author: {
       userId: 1,
       name: "Oscar",
@@ -36,6 +37,7 @@ let posts = [
     likes: 5,
     comments: [
       {
+        commentId: 1,
         author: {
           userId: 1,
           name: "Oscar",
@@ -47,6 +49,7 @@ let posts = [
     ]
   },
   {
+    postId: 2,
     author: {
       userId: 1,
       name: "Oscar",
@@ -58,6 +61,7 @@ let posts = [
     likes: 15,
     comments: [
       {
+        commentId: 1,
         author: {
           userId: 1,
           name: "Oscar",
@@ -112,9 +116,17 @@ let dialogsPage = {
       imgSrc: profileImage2,
       messages: [
         {
+          messageId: 1,
           from: "Leo",
           data: "15/2/21, 13:00",
           text: "Hi!",
+          recieved: true
+        },
+        {
+          messageId: 2,
+          from: "Leo",
+          data: "15/2/21, 14:00",
+          text: "Hi!!",
           recieved: true
         }
       ]
@@ -125,6 +137,7 @@ let dialogsPage = {
       imgSrc: profileImage3,
       messages: [
         {
+          messageId: 1,
           from: "Grey",
           data: "14/2/21, 14:00",
           text: "Good morning!",
@@ -138,6 +151,7 @@ let dialogsPage = {
       imgSrc: profileImage4,
       messages: [
         {
+          messageId: 1,
           from: "Flora",
           data: "14/2/21, 14:00",
           text: "Good morning!",

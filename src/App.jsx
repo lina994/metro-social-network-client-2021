@@ -16,8 +16,8 @@ function App(props) {
         <Avatar avatar={props.store.state.avatar} />
         <Navbar />
         <div className={s.appWrapperContent}>
-          <Route path='/profile' component={()=><Profile profilePage={props.store.state.profilePage} />} />
-          <Route path='/dialogs' component={()=><Dialogs dialogsPage={props.store.state.dialogsPage} />} />
+          <Route path='/profile' render={()=><Profile profilePage={props.store.state.profilePage} />} />
+          <Route path='/dialogs' render={()=><Dialogs dialogsPage={props.store.state.dialogsPage} />} />
         </div>
         <Footer />
       </div>
