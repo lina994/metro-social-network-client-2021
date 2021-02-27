@@ -176,4 +176,36 @@ let store = {
   state: state
 }
 
+
+// TODO - postId, author, date
+export function addPost(text) {
+  store.state.profilePage.posts.push(
+    {
+      postId: 1,
+      author: {
+        userId: 1,
+        name: "Oscar",
+        imgSrc: profileImage
+      },
+      date: "7/2/21, 13:00",
+      text: text,
+      likes: 0,
+      comments: []
+    }
+  );
+}
+
+// TODO - add messages to currect dialog, messageId, from, data
+export function addMessage(text) {
+  store.state.dialogsPage.dialogs[0].messages.push(
+    {
+      messageId: 1,
+      from: "Oscar",
+      data: "15/2/21, 13:00",
+      text: text,
+      recieved: false
+    }
+  );
+}
+
 export default store;

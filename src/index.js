@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import store from "./store"
+import store from "./store";
+import { addPost, addMessage } from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App store={store} />
+    <App store={store} addPost={addPost} addMessage={addMessage} />
   </React.StrictMode>,
   document.getElementById('root')
 );

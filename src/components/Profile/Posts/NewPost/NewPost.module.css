@@ -23,7 +23,7 @@
   border: 2px solid rgba(0,0,0,.4);
 }
 
-.postSubmit {
+.submitButton {
   display: block;
   margin: 0 auto;
   margin-right: 0;
@@ -32,7 +32,7 @@
   background: rgb(204,204,204);
 }
 
-.postSubmit:hover {
+.submitButton:hover {
   background: rgb(104,104,104);
   color: white;
 }

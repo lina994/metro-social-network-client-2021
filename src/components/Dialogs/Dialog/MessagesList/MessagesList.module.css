@@ -1,4 +1,4 @@
 .messagesList {
   background-color: blueviolet;
-  height: 80%;
+  min-height: 80%;
 }

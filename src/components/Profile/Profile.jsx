@@ -10,7 +10,7 @@ function Profile(props) {
     <section className={s.appProfile}>
       <Cover cover={props.profilePage.cover} />
       <ProfileInformation profileInfo={props.profilePage.profileInfo}/>
-      <Posts posts={props.profilePage.posts}/>
+      <Posts posts={props.profilePage.posts} addPost={props.addPost} />
     </section>
   );
 }

@@ -7,7 +7,7 @@ import OldPosts from './OldPosts/OldPosts';
 function Posts(props) {
   return (
     <div className={s.myPosts}>
-      <NewPost />
+      <NewPost addPost={props.addPost} />
       <OldPosts posts={props.posts} />
     </div>
   );

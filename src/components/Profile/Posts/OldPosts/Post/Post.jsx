@@ -23,7 +23,7 @@ function Post(props) {
       <hr className={s.hrLine}/>
       <div className={s.postFooter}>
       < div className={s.likesButton}>{"Like (" + props.post.likes + ")"}</div>
-        {/* TODO */}
+        {/* TODO - add comments*/}
         {/* <div className={s.comments}>{"comment (" + props.post.comments.length + ")"}</div> */}
       </div>
     </div>
