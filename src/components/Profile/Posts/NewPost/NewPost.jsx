@@ -5,7 +5,7 @@ function handleSubmit(element, addPost) {
   // TODO - implement this function
   let value = element.current.value;
   addPost(value);
-  // alert('Hello world ' + value);
+  element.current.value = '';
 }
 
 
@@ -15,9 +15,13 @@ function NewPost(props) {
   return (
     <div className={s.newPostWrapper}>
       <div>
-        <textarea className={s.postInput} ref={newPostElement} placeholder="Say something..."></textarea>
+        <textarea
+          className={s.postInput}
+          ref={newPostElement}
+          placeholder="Say something...">
+        </textarea>
       </div>
-      <button className={s.submitButton} onClick={()=>handleSubmit(newPostElement, props.addPost)}>Add post</button>
+      <button className={s.submitButton} onClick={() => handleSubmit(newPostElement, props.addPost)}>Add post</button>
     </div>
   );
 }

@@ -5,7 +5,8 @@ function handleSend(element, addMessage) {
   // TODO - implement this function
   let value = element.current.value;
   addMessage(value);
-  // alert('Hello world ' + value);
+  element.current.value = '';
+  element.current.focus();
 }
 
 

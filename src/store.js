@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "./render";
+
 import logoImage from './resources/logo/m7_logo.svg';      // Header
 import coverImage from './resources/cover_image.jpg'       // Cover
 import profileImage from './resources/profile_image.jpg';  // Avatar, ProfileInformation, Post
@@ -193,6 +195,7 @@ export function addPost(text) {
       comments: []
     }
   );
+  rerenderEntireTree(store);
 }
 
 // TODO - add messages to currect dialog, messageId, from, data
@@ -206,6 +209,7 @@ export function addMessage(text) {
       recieved: false
     }
   );
+  rerenderEntireTree(store);
 }
 
 export default store;
