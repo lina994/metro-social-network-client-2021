@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import s from './App.module.css';
 import Header from './components/Header/Header';
 import Avatar from './components/Avatar/Avatar';
@@ -12,12 +12,12 @@ function App(props) {
   return (
     <BrowserRouter>
       <div className={s.appWrapper}>
-        <Header header={props.store.state.header} />
-        <Avatar avatar={props.store.state.avatar} />
+        <Header header={props.state.header} />
+        <Avatar avatar={props.state.avatar} />
         <Navbar />
         <div className={s.appWrapperContent}>
-          <Route path='/profile' render={()=><Profile profilePage={props.store.state.profilePage} addPost={props.addPost} />} />
-          <Route path='/dialogs' render={()=><Dialogs dialogsPage={props.store.state.dialogsPage} addMessage={props.addMessage} />} />
+          <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />
+          <Route path='/dialogs' render={() => <Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />} />
         </div>
         <Footer />
       </div>

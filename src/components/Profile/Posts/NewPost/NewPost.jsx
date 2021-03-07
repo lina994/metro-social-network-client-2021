@@ -1,11 +1,17 @@
 import React from 'react';
 import s from './NewPost.module.css';
 
-function handleSubmit(element, addPost) {
-  // TODO - implement this function
+import { newPostChangeActionCreator, addPostActionCreator } from "./../../../../store";
+
+function handleNewPostChange(element, dispatch) {
   let value = element.current.value;
-  addPost(value);
-  element.current.value = '';
+  let action = newPostChangeActionCreator(value);
+  dispatch(action);
+}
+
+function handlePostSubmit(dispatch) {
+  let action = addPostActionCreator();
+  dispatch(action);
 }
 
 
@@ -15,34 +21,19 @@ function NewPost(props) {
   return (
     <div className={s.newPostWrapper}>
       <div>
-        <textarea
-          className={s.postInput}
-          ref={newPostElement}
-          placeholder="Say something...">
+        <textarea className={s.postInput}
+                  ref={newPostElement}
+                  placeholder="Say something..."
+                  value={props.newPostText}
+                  onChange={() => handleNewPostChange(newPostElement, props.dispatch)} >
         </textarea>
       </div>
-      <button className={s.submitButton} onClick={() => handleSubmit(newPostElement, props.addPost)}>Add post</button>
+      <button className={s.submitButton} 
+              onClick={() => handlePostSubmit(props.dispatch)}>
+        Add post
+      </button>
     </div>
   );
 }
 
 export default NewPost;
-
-
-
-// function handleSubmit(event) {
-//   alert('Hello world');
-//   event.preventDefault();
-// }
-
-// function NewPost(props) {
-//   return (
-//     <div className={s.newPostWrapper}>
-//       <form onSubmit={handleSubmit}>
-//         <textarea className={s.postInput} placeholder="Say something..."></textarea>
-//         <input className={s.postSubmit} type="submit" value="Add post" />
-//       </form>
-//     </div>
-//   );
-// }
-

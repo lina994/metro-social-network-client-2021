@@ -7,7 +7,7 @@ function Dialog(props) {
   return (
     <div className={s.dialog}>
       <MessagesList dialog={props.dialog} />
-      <NewMessage addMessage={props.addMessage} />
+      <NewMessage newMessageText={props.dialog.newMessageText} dispatch={props.dispatch} />
     </div>
   );
 }
