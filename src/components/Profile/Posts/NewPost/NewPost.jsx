@@ -3,8 +3,9 @@ import s from './NewPost.module.css';
 
 import { newPostChangeActionCreator, addPostActionCreator } from "./../../../../store";
 
-function handleNewPostChange(element, dispatch) {
-  let value = element.current.value;
+function handleNewPostChange(e, dispatch) {
+  // let value = element.current.value;
+  let value = e.target.value;
   let action = newPostChangeActionCreator(value);
   dispatch(action);
 }
@@ -16,16 +17,16 @@ function handlePostSubmit(dispatch) {
 
 
 function NewPost(props) {
-  let newPostElement = React.createRef();
+  // let newPostElement = React.createRef();
 
   return (
     <div className={s.newPostWrapper}>
       <div>
         <textarea className={s.postInput}
-                  ref={newPostElement}
+                  // ref={newPostElement}
                   placeholder="Say something..."
                   value={props.newPostText}
-                  onChange={() => handleNewPostChange(newPostElement, props.dispatch)} >
+                  onChange={(e) => handleNewPostChange(e, props.dispatch)} >
         </textarea>
       </div>
       <button className={s.submitButton} 

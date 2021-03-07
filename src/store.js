@@ -8,7 +8,7 @@ import profileImage4 from './resources/profile_image4.jpg';  // Dialogs
 const NEW_POST_CHANGE = 'NEW-POST-CHANGE';
 const ADD_POST = 'ADD-POST';
 const NEW_MESSAGE_CHANGE = 'NEW-MESSAGE-CHANGE';
-const ADD_MESSAGE = 'ADD-MESSAGE';
+const SEND_MESSAGE = 'SEND-MESSAGE';
 
 
 // Header
@@ -226,7 +226,7 @@ let store = {
     this._callSubscriber(this);
   },
 
-  addMessage() {  // TODO - add messages to currect dialog, messageId, from, data
+  sendMessage() {  // TODO - add messages to currect dialog, messageId, from, data
     let text = this.getState().dialogsPage.dialogs[0].newMessageText;
     this.getState().dialogsPage.dialogs[0].messages.push(
       {
@@ -248,8 +248,8 @@ let store = {
       this.addPost();
     } else if (action.type === NEW_MESSAGE_CHANGE) {
       this.newMessageChange(action.text);
-    } else if (action.type === ADD_MESSAGE) {
-      this.addMessage();
+    } else if (action.type === SEND_MESSAGE) {
+      this.sendMessage();
     } 
 
   }
@@ -275,9 +275,9 @@ export function newMessageChangeActionCreator(value) {
   };
 }
 
-export function addMessageActionCreator() {
+export function sendMessageActionCreator() {
   return {
-    type: ADD_MESSAGE
+    type: SEND_MESSAGE
   };
 }
 

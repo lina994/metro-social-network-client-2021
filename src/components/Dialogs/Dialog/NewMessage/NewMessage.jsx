@@ -1,16 +1,17 @@
 import React from 'react';
 import s from './NewMessage.module.css';
 
-import { newMessageChangeActionCreator, addMessageActionCreator } from "./../../../../store";
+import { newMessageChangeActionCreator, sendMessageActionCreator } from "./../../../../store";
 
-function handleNewMessageChange(element, dispatch) {
-  let value = element.current.value;
+function handleNewMessageChange(e, dispatch) {
+  // let value = element.current.value;
+  let value = e.target.value;
   let action = newMessageChangeActionCreator(value);
   dispatch(action);
 }
 
 function handleSend(element, dispatch) {
-  let action = addMessageActionCreator();
+  let action = sendMessageActionCreator();
   dispatch(action);
   element.current.focus();
 }
@@ -25,7 +26,7 @@ function NewMessage(props) {
                   ref={newMessageElement} 
                   placeholder="Send a message..."
                   value={props.newMessageText}
-                  onChange={() => handleNewMessageChange(newMessageElement, props.dispatch)} >
+                  onChange={(e) => handleNewMessageChange(e, props.dispatch)} >
         </textarea>
       </div>
       <button className={s.sendButton} onClick={() => handleSend(newMessageElement, props.dispatch)}>Send</button>
