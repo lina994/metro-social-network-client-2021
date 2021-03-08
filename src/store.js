@@ -1,14 +1,12 @@
+import { profileReducer } from './reducers/profileReducer';
+import { dialogsReducer } from './reducers/dialogsReducer';
+
 import logoImage from './resources/logo/m7_logo.svg';      // Header
 import coverImage from './resources/cover_image.jpg'       // Cover
 import profileImage from './resources/profile_image.jpg';  // Avatar, ProfileInformation, Post
 import profileImage2 from './resources/profile_image2.jpg';  // Dialogs
 import profileImage3 from './resources/profile_image3.jpg';  // Dialogs
 import profileImage4 from './resources/profile_image4.jpg';  // Dialogs
-
-const NEW_POST_CHANGE = 'NEW-POST-CHANGE';
-const ADD_POST = 'ADD-POST';
-const NEW_MESSAGE_CHANGE = 'NEW-MESSAGE-CHANGE';
-const SEND_MESSAGE = 'SEND-MESSAGE';
 
 
 // Header
@@ -196,89 +194,11 @@ let store = {
     this._callSubscriber = observer;
   },
 
-  newPostChange(text) {
-    this.getState().profilePage.posts.newPostText = text;
-    this._callSubscriber(this);
-  },
-
-  addPost() { // TODO - postId, author, date
-    let text = this.getState().profilePage.posts.newPostText;
-    this.getState().profilePage.posts.oldPosts.push(
-      {
-        postId: 1,
-        author: {
-          userId: 1,
-          name: "Oscar",
-          imgSrc: profileImage
-        },
-        date: "7/2/21, 13:00",
-        text: text,
-        likes: 0,
-        comments: []
-      }
-    );
-    this.getState().profilePage.posts.newPostText = "";
-    this._callSubscriber(this);
-  },
-
-  newMessageChange(text) {
-    this.getState().dialogsPage.dialogs[0].newMessageText = text;
-    this._callSubscriber(this);
-  },
-
-  sendMessage() {  // TODO - add messages to currect dialog, messageId, from, data
-    let text = this.getState().dialogsPage.dialogs[0].newMessageText;
-    this.getState().dialogsPage.dialogs[0].messages.push(
-      {
-        messageId: 1,
-        from: "Oscar",
-        data: "15/2/21, 13:00",
-        text: text,
-        recieved: false
-      }
-    );
-    this.getState().dialogsPage.dialogs[0].newMessageText = "";
-    this._callSubscriber(this);
-  },
-
   dispatch(action) {
-    if (action.type === NEW_POST_CHANGE) {
-      this.newPostChange(action.text);
-    } else if (action.type === ADD_POST) {
-      this.addPost();
-    } else if (action.type === NEW_MESSAGE_CHANGE) {
-      this.newMessageChange(action.text);
-    } else if (action.type === SEND_MESSAGE) {
-      this.sendMessage();
-    } 
-
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    this._callSubscriber(this);
   }
-}
-
-export function newPostChangeActionCreator(value) {
-  return {
-    type: NEW_POST_CHANGE,
-    text: value
-  };
-}
-
-export function addPostActionCreator() {
-  return {
-    type: ADD_POST
-  };
-}
-
-export function newMessageChangeActionCreator(value) {
-  return {
-    type: NEW_MESSAGE_CHANGE,
-    text: value
-  };
-}
-
-export function sendMessageActionCreator() {
-  return {
-    type: SEND_MESSAGE
-  };
 }
 
 

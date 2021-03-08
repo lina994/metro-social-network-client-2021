@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './NewMessage.module.css';
 
-import { newMessageChangeActionCreator, sendMessageActionCreator } from "./../../../../store";
+import { newMessageChangeActionCreator, sendMessageActionCreator } from "./../../../../reducers/dialogsReducer";
 
 function handleNewMessageChange(e, dispatch) {
   // let value = element.current.value;

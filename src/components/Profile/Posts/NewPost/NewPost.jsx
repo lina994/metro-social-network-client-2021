@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './NewPost.module.css';
 
-import { newPostChangeActionCreator, addPostActionCreator } from "./../../../../store";
+import { newPostChangeActionCreator, addPostActionCreator } from "./../../../../reducers/profileReducer";
 
 function handleNewPostChange(e, dispatch) {
   // let value = element.current.value;
