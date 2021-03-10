@@ -12,7 +12,8 @@ function App(props) {
   return (
     <BrowserRouter>
       <div className={s.appWrapper}>
-        <Header header={props.state.header} />
+        {/* <Header header={props.state.header} /> */}
+        <Header />
         <Avatar avatar={props.state.avatar} />
         <Navbar />
         <div className={s.appWrapperContent}>
