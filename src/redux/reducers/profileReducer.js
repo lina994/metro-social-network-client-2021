@@ -115,7 +115,7 @@ export function profileReducer(state = initialState, action) {
   return state;
 }
 
-export function newPostChangeActionCreator(value) {
+export function updateNewPostActionCreator(value) {
   return {
     type: NEW_POST_CHANGE,
     text: value

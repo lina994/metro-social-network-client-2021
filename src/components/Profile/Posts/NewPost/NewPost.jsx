@@ -1,36 +1,30 @@
 import React from 'react';
 import s from './NewPost.module.css';
 
-import { newPostChangeActionCreator, addPostActionCreator } from "./../../../../redux/reducers/profileReducer";
 
-function handleNewPostChange(e, dispatch) {
-  // let value = element.current.value;
+function handleNewPostChange(e, updatePost) {
   let value = e.target.value;
-  let action = newPostChangeActionCreator(value);
-  dispatch(action);
+  updatePost(value);
 }
 
-function handlePostSubmit(dispatch) {
-  let action = addPostActionCreator();
-  dispatch(action);
+function handlePostSubmit(addPost) {
+  addPost();
 }
 
 
 function NewPost(props) {
-  // let newPostElement = React.createRef();
 
   return (
     <div className={s.newPostWrapper}>
       <div>
         <textarea className={s.postInput}
-                  // ref={newPostElement}
                   placeholder="Say something..."
                   value={props.newPostText}
-                  onChange={(e) => handleNewPostChange(e, props.dispatch)} >
+                  onChange={(e) => handleNewPostChange(e, props.updatePost)} >
         </textarea>
       </div>
       <button className={s.submitButton} 
-              onClick={() => handlePostSubmit(props.dispatch)}>
+              onClick={() => handlePostSubmit(props.addPost)}>
         Add post
       </button>
     </div>

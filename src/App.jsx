@@ -12,13 +12,12 @@ function App(props) {
   return (
     <BrowserRouter>
       <div className={s.appWrapper}>
-        {/* <Header header={props.state.header} /> */}
         <Header />
         <Avatar avatar={props.state.avatar} />
         <Navbar />
         <div className={s.appWrapperContent}>
-          <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />
-          <Route path='/dialogs' render={() => <Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />} />
+          <Route path='/profile' render={() => <Profile profilePage={props.state.profilePage} store={props.store} />} />
+          <Route path='/dialogs' render={() => <Dialogs dialogsPage={props.state.dialogsPage} store={props.store} />} />
         </div>
         <Footer />
       </div>
