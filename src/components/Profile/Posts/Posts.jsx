@@ -2,13 +2,13 @@ import React from 'react';
 import s from './Posts.module.css';
 
 import NewPostContainer from './NewPost/NewPostContainer';
-import OldPosts from './OldPosts/OldPosts';
+import OldPostsContainer from './OldPosts/OldPostsContainer';
 
 function Posts(props) {
   return (
     <div className={s.myPosts}>
-      <NewPostContainer newPostText={props.posts.newPostText} store={props.store} />
-      <OldPosts posts={props.posts.oldPosts} />
+      <NewPostContainer />
+      <OldPostsContainer />
     </div>
   );
 }

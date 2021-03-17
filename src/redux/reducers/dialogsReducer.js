@@ -79,39 +79,46 @@ let initialState = {
   ]
 };
 
-function newMessageChange(state, text) {
-  state.dialogs[0].newMessageText = text;
-  return state;
-}
 
-function sendMessage(state) {  // TODO - add messages to currect dialog, messageId, from, data
-  let text = state.dialogs[0].newMessageText;
-  state.dialogs[0].messages.push(
-    {
+function createNewMessage(text) {  // TODO - add messages to currect dialog, messageId, from, data
+  return {
       messageId: 1,
       from: "Oscar",
       data: "15/2/21, 13:00",
       text: text,
       recieved: false
-    }
-  );
-  state.dialogs[0].newMessageText = "";
-  return state;
+    };
 }
 
 export function dialogsReducer(state = initialState, action) {
+  
   switch (action.type) {
     case NEW_MESSAGE_CHANGE:
-      state = newMessageChange(state, action.text);
-      break;
+      {
+        let stateCopy = {
+          ...state,
+          dialogs: [...state.dialogs]
+        };
+        stateCopy.dialogs[0].newMessageText = action.text;
+        return stateCopy;
+      }
     case SEND_MESSAGE:
-      state = sendMessage(state);
-      break;
+      {
+        let stateCopy = {
+          ...state,
+          dialogs: [...state.dialogs]
+        };
+        stateCopy.dialogs[0].messages = [...state.dialogs[0].messages, createNewMessage(state.dialogs[0].newMessageText)];
+        stateCopy.dialogs[0].newMessageText = "";
+        return stateCopy;
+      }
+    default:
+      return state;
   }
-  return state;
+  
 }
 
-export function newMessageChangeActionCreator(value) {
+export function updateNewMessageActionCreator(value) {
   return {
     type: NEW_MESSAGE_CHANGE,
     text: value

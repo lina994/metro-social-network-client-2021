@@ -78,41 +78,46 @@ let initialState = {
   posts: posts
 };
 
-function newPostChange(state, text) {
-  state.posts.newPostText = text;
-  return state;
-}
 
-function addPost(state, img) { // TODO - postId, author, date
-  let text = state.posts.newPostText;
-  state.posts.oldPosts.push(
-    {
-      postId: 1,
-      author: {
-        userId: 1,
-        name: "Oscar",
-        imgSrc: img
-      },
-      date: "7/2/21, 13:00",
-      text: text,
-      likes: 0,
-      comments: []
-    }
-  );
-  state.posts.newPostText = "";
-  return state;
+
+function createNewPost(text, img) { // TODO - postId, author, date
+  return {
+    postId: 1,
+    author: {
+      userId: 1,
+      name: "Oscar",
+      imgSrc: img
+    },
+    date: "7/2/21, 13:00",
+    text: text,
+    likes: 0,
+    comments: []
+  };
+
 }
 
 export function profileReducer(state = initialState, action) {
   switch(action.type) {
     case NEW_POST_CHANGE:
-      state = newPostChange(state, action.text);
-      break;
+      return {
+        ...state,
+        posts: {
+          ...state.posts,
+          newPostText: action.text
+        }
+      };
     case ADD_POST:
-      state = addPost(state, action.img);
-      break;
+      return {
+        ...state,
+        posts: {
+          ...state.posts,
+          newPostText: "",
+          oldPosts: [...state.posts.oldPosts, createNewPost(state.posts.newPostText, action.img)]
+        }
+      };
+    default:
+       return state;
   }
-  return state;
 }
 
 export function updateNewPostActionCreator(value) {

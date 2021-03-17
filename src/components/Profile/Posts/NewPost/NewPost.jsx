@@ -13,7 +13,6 @@ function handlePostSubmit(addPost) {
 
 
 function NewPost(props) {
-
   return (
     <div className={s.newPostWrapper}>
       <div>
