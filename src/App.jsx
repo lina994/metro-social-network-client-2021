@@ -6,6 +6,7 @@ import Avatar from './components/Avatar/Avatar';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
+import Users from './components/Users/Users';
 import Footer from './components/Footer/Footer';
 
 function App(props) {
@@ -17,7 +18,8 @@ function App(props) {
       <Navbar />
       <div className={s.appWrapperContent}>
         <Route path='/profile' render={() => <Profile profilePage={state.profilePage} />} />
-        <Route path='/dialogs' render={() => <Dialogs dialogsPage={state.dialogsPage} store={props.store} />} />
+        <Route path='/dialogs' render={() => <Dialogs dialogsPage={state.dialogsPage} />} />
+        <Route path='/friends' render={() => <Users friendsPage={state.friendsPage} />} />
       </div>
       <Footer />
     </div>

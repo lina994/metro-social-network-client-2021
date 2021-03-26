@@ -12,6 +12,9 @@ function Navbar(props) {
         <NavLink to='/dialogs' className={s.link} activeClassName={s.activeNavLink}>Dialogs</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
+        <NavLink to='/friends/my_friends' className={s.link} activeClassName={s.activeNavLink}>Friends</NavLink>
+      </div>
+      <div className={s.navLinkWrapper}>
         <NavLink to='/news' className={s.link} activeClassName={s.activeNavLink}>News</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
