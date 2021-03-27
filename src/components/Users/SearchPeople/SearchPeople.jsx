@@ -1,13 +1,14 @@
 import React from 'react';
 import s from './SearchPeople.module.css';
-
+import User from '../User/User';
 
 
 function SearchPeople(props) {
-  console.log("11111");
+  let users =  props.searchPeoplePage.users.map((user) => <User user={user} />);
   return (
     <div className={s.searchPeopleWrapper}>
-      SearchPeople
+      <h2>Search people</h2>
+      { users }
     </div>
   );
 }

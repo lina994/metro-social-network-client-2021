@@ -19,7 +19,7 @@ function App(props) {
       <div className={s.appWrapperContent}>
         <Route path='/profile' render={() => <Profile profilePage={state.profilePage} />} />
         <Route path='/dialogs' render={() => <Dialogs dialogsPage={state.dialogsPage} />} />
-        <Route path='/friends' render={() => <Users friendsPage={state.friendsPage} />} />
+        <Route path='/users' render={() => <Users friendsPage={state.friendsPage} searchPeoplePage={state.searchPeoplePage} />} />
       </div>
       <Footer />
     </div>

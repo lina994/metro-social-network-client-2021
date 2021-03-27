@@ -12,8 +12,8 @@ function Users(props) {
   return (
     <div className={s.usersPageWrapper}>
       <UsersPageMenu />
-      <Route path='/friends/my_friends' render={() => <Friends friendsPage={props.friendsPage} />} />
-      <Route path='/friends/search_people' render={() => <SearchPeople />} />
+      <Route path='/users/my_friends' render={() => <Friends friendsPage={props.friendsPage} />} />
+      <Route path='/users/search_people' render={() => <SearchPeople searchPeoplePage={props.searchPeoplePage} />} />
     </div>
   );
 }

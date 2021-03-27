@@ -7,10 +7,10 @@ function UsersPageMenu(props) {
   return (
     <div className={s.usersPageMenuWrapper}>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/friends/my_friends' className={s.link} activeClassName={s.activeNavLink}>My Friends</NavLink>
+        <NavLink to='/users/my_friends' className={s.link} activeClassName={s.activeNavLink}>My Friends</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/friends/search_people' className={s.link} activeClassName={s.activeNavLink}>Search People</NavLink>
+        <NavLink to='/users/search_people' className={s.link} activeClassName={s.activeNavLink}>Search People</NavLink>
       </div>
     </div>
   );

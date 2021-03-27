@@ -1,13 +1,13 @@
 import React from 'react';
-import s from './Friend.module.css';
+import s from './User.module.css';
 
 
 
-function Friend(props) {
+function User(props) {
   return (
-    <div className={s.friendWrapper}>
+    <div className={s.userWrapper}>
       <div className={s.avatarWrapper}>
-        <img className={s.avatar} src={props.user.imgSrc} alt="friend avatar" />
+        <img className={s.avatar} src={props.user.imgSrc} alt="User avatar" />
       </div>
       <div className={s.userInfo}>
         <div className={s.name}>{props.user.name}</div>
@@ -18,4 +18,4 @@ function Friend(props) {
   );
 }
 
-export default Friend;
+export default User;
