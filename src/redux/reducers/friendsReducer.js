@@ -12,7 +12,8 @@ let initialState = {
       location: {
         country: 'USA',
         city: 'New York'
-      }
+      },
+      isFriend: true
     },
     {
       userId: 3,
@@ -22,7 +23,8 @@ let initialState = {
       location: {
         country: 'USA',
         city: 'New York'
-      }
+      },
+      isFriend: true
     },
     {
       userId: 4,
@@ -32,7 +34,8 @@ let initialState = {
       location: {
         country: 'USA',
         city: 'Boston'
-      }
+      },
+      isFriend: true
     }
   ]
 };
@@ -46,3 +49,4 @@ export function friendsReducer(state = initialState, action) {
   }
   
 }
+

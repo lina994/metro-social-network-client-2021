@@ -12,7 +12,7 @@ function Navbar(props) {
         <NavLink to='/dialogs' className={s.link} activeClassName={s.activeNavLink}>Dialogs</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
-        <NavLink to='/users/my_friends' className={s.link} activeClassName={s.activeNavLink}>Friends</NavLink>
+        <NavLink to='/users' className={s.link} activeClassName={s.activeNavLink}>Friends</NavLink>
       </div>
       <div className={s.navLinkWrapper}>
         <NavLink to='/news' className={s.link} activeClassName={s.activeNavLink}>News</NavLink>
@@ -28,3 +28,4 @@ function Navbar(props) {
 }
 
 export default Navbar;
+

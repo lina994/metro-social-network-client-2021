@@ -3,7 +3,6 @@ import s from './Friends.module.css';
 import User from '../User/User';
 
 
-
 function Friends(props) {
   let friends =  props.friendsPage.users.map((user) => <User user={user} />);
   return (
@@ -15,3 +14,4 @@ function Friends(props) {
 }
 
 export default Friends;
+

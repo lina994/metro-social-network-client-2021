@@ -14,3 +14,4 @@ function SearchPeople(props) {
 }
 
 export default SearchPeople;
+

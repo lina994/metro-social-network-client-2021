@@ -12,3 +12,4 @@ export function avatarReducer(state = initialState, action) {
   // }
   return state;
 }
+

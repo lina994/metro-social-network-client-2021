@@ -5,9 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* always show the vertical scrollbar in a browser 
+    (otherwise the components will be resize when the scrollbar appears and disappears) */
+  overflow-y: scroll; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
