@@ -2,6 +2,9 @@ import profileImage2 from './../../resources/profile_image2.jpg';
 import profileImage3 from './../../resources/profile_image3.jpg';
 import profileImage4 from './../../resources/profile_image4.jpg';
 
+const ADD_FRIEND = 'ADD-FRIEND';
+const REMOVE_FRIEND = 'REMOVE-FRIEND';
+
 let initialState = {
   users: [
     {
@@ -42,11 +45,51 @@ let initialState = {
 
 
 export function friendsReducer(state = initialState, action) {
-  
   switch (action.type) {
+    case ADD_FRIEND:
+      let newFriend = {
+        userId: action.userId,
+        name: action.name,
+        imgSrc: action.imgSrc,
+        age: action.age,
+        location: action.location,
+        isFriend: true
+      }
+      return {
+        ...state,
+        users: [...state.users, newFriend]
+      };
+    case REMOVE_FRIEND:
+      return {
+        ...state,
+        users: state.users.filter(user => {
+          return user.userId !== action.userId;
+        })
+      };
     default:
       return state;
   }
-  
+
 }
 
+
+export function addNewFriendActionCreator(userInfo) {
+  return {
+    type: ADD_FRIEND,
+    userId: userInfo.userId,
+    name: userInfo.name,
+    imgSrc: userInfo.imgSrc,
+    age: userInfo.age,
+    location: {
+      country: userInfo.location.country,
+      city: userInfo.location.city
+    }
+  };
+}
+
+export function removeFriendActionCreator(userId) {
+  return {
+    type: REMOVE_FRIEND,
+    userId: userId
+  };
+}

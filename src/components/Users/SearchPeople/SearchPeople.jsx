@@ -4,7 +4,7 @@ import User from '../User/User';
 
 
 function SearchPeople(props) {
-  let users =  props.searchPeoplePage.users.map((user) => <User user={user} />);
+  let users =  props.users.map((user, index) => <User key={index} user={user} addFriend={props.addFriend} removeFriend={props.removeFriend} />);
   return (
     <div className={s.searchPeopleWrapper}>
       <h2>Search people</h2>

@@ -39,6 +39,9 @@
   margin-right: 5%;
   border-radius: 50%;
   position: relative;
+  outline: none;
+  cursor: pointer;
+  background: none;
 }
 
 .addButton:hover {

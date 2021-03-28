@@ -4,7 +4,7 @@ import { avatarReducer } from "./reducers/avatarReducer";
 import { profileReducer } from './reducers/profileReducer';
 import { dialogsReducer } from './reducers/dialogsReducer';
 import { friendsReducer } from './reducers/friendsReducer';
-import { searcgPeopleReducer } from './reducers/searcgPeopleReducer';
+import { searchPeopleReducer } from './reducers/searchPeopleReducer';
 
 
 let reducers = combineReducers({
@@ -12,7 +12,7 @@ let reducers = combineReducers({
   profilePage: profileReducer,
   dialogsPage: dialogsReducer,
   friendsPage: friendsReducer,
-  searchPeoplePage: searcgPeopleReducer
+  searchPeoplePage: searchPeopleReducer
 });
 
 let store = createStore(reducers);

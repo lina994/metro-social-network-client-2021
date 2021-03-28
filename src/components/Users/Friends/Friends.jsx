@@ -4,7 +4,7 @@ import User from '../User/User';
 
 
 function Friends(props) {
-  let friends =  props.friendsPage.users.map((user) => <User user={user} />);
+  let friends =  props.users.map((user, index) => <User  key={index} user={user} addFriend={props.addFriend} removeFriend={props.removeFriend} />);
   return (
     <div className={s.friendsWrapper}>
       <h2>Friends</h2>
