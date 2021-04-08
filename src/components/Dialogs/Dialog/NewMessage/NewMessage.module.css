@@ -29,6 +29,8 @@
   padding: 10px 20px;
   border: none;
   background: rgb(204,204,204);
+  outline: none;
+  cursor: pointer;
 }
 
 .sendButton:hover {

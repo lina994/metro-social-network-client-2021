@@ -1,1 +1,4 @@
-
+.showMoreButton {
+  outline: none;
+  cursor: pointer;
+}
