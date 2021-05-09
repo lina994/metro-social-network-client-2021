@@ -2,6 +2,8 @@ import React from 'react';
 import s from './SearchPeople.module.css';
 import User from '../User/User';
 
+import * as axios from 'axios';  // TODO - 13-4-21 move to separate file
+
 let firstVisit = true; // StrictMode * 2
 
 function onShoWMoreButtonClick(showMore) {
@@ -12,6 +14,10 @@ function onShoWMoreButtonClick(showMore) {
 function SearchPeople(props) {
   if (props.users.length === 0 && firstVisit) { // TODO - remove, side effects
     firstVisit = false;
+    axios
+      .get("http://localhost:3001/users")  // TODO - get from configuration file
+      .then((data) => console.log(data));
+
     props.showMore(
       [
         {
