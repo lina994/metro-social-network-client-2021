@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Friends from './Friends';
-import { addNewFriendActionCreator, removeFriendActionCreator, showMoreFriendActionCreator} from "./../../../redux/reducers/friendsReducer";
+import { addNewFriendActionCreator, removeFriendActionCreator, showMoreFriendActionCreator } from "./../../../redux/reducers/friendsReducer";
 
 
 let mapStateToProps = (state) => {

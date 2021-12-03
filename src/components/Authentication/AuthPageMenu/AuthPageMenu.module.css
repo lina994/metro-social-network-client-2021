@@ -1,0 +1,28 @@
+.authPageMenuWrapper {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navLinkWrapper {
+  width: 50%;
+  position: relative;
+}
+
+.link {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #1b3860;
+}
+
+.activeNavLink {
+  background: #1b3860;
+  color: #fff;
+}

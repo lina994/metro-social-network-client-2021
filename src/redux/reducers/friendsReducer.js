@@ -9,36 +9,30 @@ const SHOW_MORE_FRIENDS = 'SHOW-MORE-FRIENDS';
 let initialState = {
   users: [
     {
-      userId: 2,
-      name: "Leo",
-      imgSrc: profileImage2,
-      age: 25,
-      location: {
-        country: 'USA',
-        city: 'New York'
-      },
+      id: 2,
+      firstName: "Leo",
+      lastName: '',
+      imgUrl: profileImage2,
+      country: 'USA',
+      city: 'New York',
       isFriend: true
     },
     {
-      userId: 3,
-      name: "Grey",
-      imgSrc: profileImage3,
-      age: 15,
-      location: {
-        country: 'USA',
-        city: 'New York'
-      },
+      id: 3,
+      firstName: "Grey",
+      lastName: '',
+      imgUrl: profileImage3,
+      country: 'USA',
+      city: 'New York',
       isFriend: true
     },
     {
-      userId: 4,
-      name: "Flora",
-      imgSrc: profileImage4,
-      age: 18,
-      location: {
-        country: 'USA',
-        city: 'Boston'
-      },
+      id: 4,
+      firstName: "Flora",
+      lastName: '',
+      imgUrl: profileImage4,
+      country: 'USA',
+      city: 'Boston',
       isFriend: true
     }
   ]
@@ -49,11 +43,12 @@ export function friendsReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_FRIEND:
       let newFriend = {
-        userId: action.userId,
-        name: action.name,
-        imgSrc: action.imgSrc,
-        age: action.age,
-        location: action.location,
+        id: action.id,
+        firstName: action.firstName,
+        lastName: action.lastName,
+        imgUrl: action.imgUrl,
+        country: action.country,
+        city: action.city,
         isFriend: true
       }
       return {
@@ -64,7 +59,7 @@ export function friendsReducer(state = initialState, action) {
       return {
         ...state,
         users: state.users.filter(user => {
-          return user.userId !== action.userId;
+          return user.id !== action.id;
         })
       };
     case SHOW_MORE_FRIENDS:
@@ -82,21 +77,19 @@ export function friendsReducer(state = initialState, action) {
 export function addNewFriendActionCreator(userInfo) {
   return {
     type: ADD_FRIEND,
-    userId: userInfo.userId,
-    name: userInfo.name,
-    imgSrc: userInfo.imgSrc,
-    age: userInfo.age,
-    location: {
-      country: userInfo.location.country,
-      city: userInfo.location.city
-    }
+    id: userInfo.id,
+    firstName: userInfo.firstName,
+    lastName: userInfo.lastName,
+    imgUrl: userInfo.imgUrl,
+    country: userInfo.country,
+    city: userInfo.city
   };
 }
 
 export function removeFriendActionCreator(userId) {
   return {
     type: REMOVE_FRIEND,
-    userId: userId
+    id: userId
   };
 }
 
