@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/metro-social-network-client/static/css/main.4fff3f90.chunk.css",
+    "main.js": "/metro-social-network-client/static/js/main.90dd978d.chunk.js",
+    "main.js.map": "/metro-social-network-client/static/js/main.90dd978d.chunk.js.map",
+    "runtime-main.js": "/metro-social-network-client/static/js/runtime-main.3b08eac9.js",
+    "runtime-main.js.map": "/metro-social-network-client/static/js/runtime-main.3b08eac9.js.map",
+    "static/js/2.93aa8185.chunk.js": "/metro-social-network-client/static/js/2.93aa8185.chunk.js",
+    "static/js/2.93aa8185.chunk.js.map": "/metro-social-network-client/static/js/2.93aa8185.chunk.js.map",
+    "static/js/3.c65402f9.chunk.js": "/metro-social-network-client/static/js/3.c65402f9.chunk.js",
+    "static/js/3.c65402f9.chunk.js.map": "/metro-social-network-client/static/js/3.c65402f9.chunk.js.map",
+    "index.html": "/metro-social-network-client/index.html",
+    "static/css/main.4fff3f90.chunk.css.map": "/metro-social-network-client/static/css/main.4fff3f90.chunk.css.map",
+    "static/js/2.93aa8185.chunk.js.LICENSE.txt": "/metro-social-network-client/static/js/2.93aa8185.chunk.js.LICENSE.txt",
+    "static/media/cover_image.20e3d3b2.jpg": "/metro-social-network-client/static/media/cover_image.20e3d3b2.jpg",
+    "static/media/m7_logo.b773ae2d.svg": "/metro-social-network-client/static/media/m7_logo.b773ae2d.svg",
+    "static/media/profile_image.605f2219.jpg": "/metro-social-network-client/static/media/profile_image.605f2219.jpg",
+    "static/media/profile_image2.1c499ddd.jpg": "/metro-social-network-client/static/media/profile_image2.1c499ddd.jpg",
+    "static/media/profile_image3.c58f4224.jpg": "/metro-social-network-client/static/media/profile_image3.c58f4224.jpg",
+    "static/media/profile_image4.befbd8f6.jpg": "/metro-social-network-client/static/media/profile_image4.befbd8f6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3b08eac9.js",
+    "static/js/2.93aa8185.chunk.js",
+    "static/css/main.4fff3f90.chunk.css",
+    "static/js/main.90dd978d.chunk.js"
+  ]
+}
