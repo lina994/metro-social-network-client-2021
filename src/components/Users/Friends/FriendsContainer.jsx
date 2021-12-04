@@ -5,7 +5,10 @@ import { addNewFriendActionCreator, removeFriendActionCreator, showMoreFriendAct
 
 let mapStateToProps = (state) => {
   return {
-    users: state.friendsPage.users
+    id: state.authenticationPage.id,
+    token: state.authenticationPage.token,
+    users: state.friendsPage.users,
+    page: state.friendsPage.page
   };
 };
 
@@ -18,7 +21,7 @@ let mapDispatchToProps = (dispatch) => {
       dispatch(removeFriendActionCreator(userId));
     },
     showMore: (users) => {
-      dispatch(showMoreFriendActionCreator(users)); // TODO
+      dispatch(showMoreFriendActionCreator(users));
     }
   };
 };

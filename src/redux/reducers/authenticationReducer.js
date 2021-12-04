@@ -12,8 +12,16 @@ export const SIGN_UP_GENDER_CHANGE = 'SIGN-UP-GENDER-CHANGE';
 export const SIGN_UP = 'SIGN-UP';
 
 
+function parseJwt(token) {
+  if (!token) { return; }
+  const base64Payload = token.split('.')[1];
+  const decodedString = atob(base64Payload); // takes a string and decodes it from Base64.
+  return JSON.parse(decodedString).id;
+}
+
 let initialState = {
   token: null,
+  id: null,
   logInEmail: '',
   logInPassword: '',
   signUpEmail: '',
@@ -41,6 +49,7 @@ export function authenticationReducer(state = initialState, action) {
       return {
         ...state,
         token: action.token,
+        id: parseJwt(action.token),
         logInEmail: '',
         logInPassword: ''
       };
@@ -82,7 +91,15 @@ export function authenticationReducer(state = initialState, action) {
     case SIGN_UP:
       return {
         ...state,
-        token: action.token
+        token: action.token,
+        id: parseJwt(action.token),
+        signUpEmail: '',
+        signUpPassword: '',
+        signUpFirstName: '',
+        signUpLastName: '',
+        signUpCountry: '',
+        signUpCity: '',
+        signUpGender: ''
       }
     default:
       return state;

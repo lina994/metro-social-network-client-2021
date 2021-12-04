@@ -5,7 +5,9 @@ import { showMoreUsersActionCreator } from "./../../../redux/reducers/searchPeop
 
 let mapStateToProps = (state) => {
   return {
-    users: state.searchPeoplePage.users
+    token: state.authenticationPage.token,
+    users: state.searchPeoplePage.users,
+    page: state.searchPeoplePage.page
   };
 };
 
@@ -18,7 +20,7 @@ let mapDispatchToProps = (dispatch) => {
       dispatch(removeFriendActionCreator(userId));
     },
     showMore: (users) => {
-      dispatch(showMoreUsersActionCreator(users)); // TODO
+      dispatch(showMoreUsersActionCreator(users));
     }
   };
 };

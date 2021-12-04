@@ -1,9 +1,10 @@
-
 import { ADD_FRIEND, REMOVE_FRIEND} from './friendsReducer';
 const SHOW_MORE_USERS = 'SHOW-MORE-USERS';
 
+// user: id, isActive, lastLogin, accountStatus, firstName, lastName, imgUrl, intro, country, city, gender, isFriend
 let initialState = {
-  users: []
+  users: [],
+  page: 1
 };
 
 
@@ -32,7 +33,8 @@ export function searchPeopleReducer(state = initialState, action) {
     case SHOW_MORE_USERS:
       return {
         ...state,
-        users: [...state.users, ...action.users]
+        users: [...state.users, ...action.users],
+        page: action.users.length < 20 ? -1 : state.page + 1
       }
     default:
       return state;

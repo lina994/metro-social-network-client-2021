@@ -1,54 +1,29 @@
-import profileImage2 from './../../resources/profile_image2.jpg';
-import profileImage3 from './../../resources/profile_image3.jpg';
-import profileImage4 from './../../resources/profile_image4.jpg';
-
 export const ADD_FRIEND = 'ADD-FRIEND';
 export const REMOVE_FRIEND = 'REMOVE-FRIEND';
 const SHOW_MORE_FRIENDS = 'SHOW-MORE-FRIENDS';
 
 let initialState = {
-  users: [
-    {
-      id: 2,
-      firstName: "Leo",
-      lastName: '',
-      imgUrl: profileImage2,
-      country: 'USA',
-      city: 'New York',
-      isFriend: true
-    },
-    {
-      id: 3,
-      firstName: "Grey",
-      lastName: '',
-      imgUrl: profileImage3,
-      country: 'USA',
-      city: 'New York',
-      isFriend: true
-    },
-    {
-      id: 4,
-      firstName: "Flora",
-      lastName: '',
-      imgUrl: profileImage4,
-      country: 'USA',
-      city: 'Boston',
-      isFriend: true
-    }
-  ]
+  users: [],
+  page: 1
 };
 
+// user: id, isActive, lastLogin, accountStatus, firstName, lastName, imgUrl, intro, country, city, gender, isFriend
 
 export function friendsReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_FRIEND:
       let newFriend = {
         id: action.id,
+        isActive: action.isActive,
+        lastLogin: action.lastLogin,
+        accountStatus: action.accountStatus,
         firstName: action.firstName,
         lastName: action.lastName,
         imgUrl: action.imgUrl,
+        intro: action.intro,
         country: action.country,
         city: action.city,
+        gender: action.gender, 
         isFriend: true
       }
       return {
@@ -65,7 +40,8 @@ export function friendsReducer(state = initialState, action) {
     case SHOW_MORE_FRIENDS:
       return {
         ...state,
-        users: [...state.users, ...action.users]
+        users: [...state.users, ...action.users],
+        page: action.users.length < 20 ? -1 : state.page + 1
       }
     default:
       return state;
